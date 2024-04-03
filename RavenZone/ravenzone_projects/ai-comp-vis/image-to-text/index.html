@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <nav>
+        <img width="100" height="100" onclick="history.back()" src="https://img.icons8.com/ios-filled/292929/100/back.png" alt="back"/>
+        <h3>
+            Face Detection
+        </h3>
+        <div class="undef"></div>
+    </nav>
+    <main>
+        <div class="leftBody">
+            <div class="validation">
+                <input type="file" accept="image/*" name="" id="word">
+                <button onclick="doIt()">Submit</button>
+            </div>
+            <div class="introduc" onclick="viewIntroduction()">
+                <img width="100" height="100" src="https://img.icons8.com/ios/100/292929/info--v1.png" alt="info--v1"/>
+            </div>
+        </div>
+        <div class="rightBody">
+            <ul id="dataZone">
+                
+            </ul>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

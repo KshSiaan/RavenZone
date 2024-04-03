@@ -1,0 +1,202 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=Kaushan+Script&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=Kaushan+Script&display=swap");
+#cursor {
+  height: 15px;
+  width: 15px;
+  background-image: url("../res/cursor.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-clip: content-box;
+  position: fixed;
+  z-index: 10;
+  pointer-events: none;
+}
+
+body {
+  background-color: #F6F3E9;
+}
+
+header {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: safe;
+  align-items: center;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  height: 70vh;
+  aspect-ratio: 1/1;
+  background-image: url("../res/magic-circle-drawing-28.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-clip: content-box;
+  opacity: 0.6;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  height: 48px;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img {
+  height: 80%;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: #F6F3E9;
+}
+
+.leftHead {
+  height: 100%;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  background-image: url("../res/dotsmirr.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  background-clip: content-box;
+}
+
+.rightHead {
+  height: 100%;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  background-image: url("../res/dots.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  background-clip: content-box;
+  position: relative;
+}
+.rightHead img {
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  animation: ravenFly 4s ease-in-out infinite;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+@keyframes ravenFly {
+  0% {
+    top: 52%;
+  }
+  50% {
+    top: 48%;
+  }
+  100% {
+    top: 52%;
+  }
+}
+.leftHead h1 {
+  margin: 0 auto;
+  margin-top: 108px;
+  padding: 0;
+  padding-left: 48px;
+  font-size: 124px;
+  font-family: "Anton", sans-serif;
+  letter-spacing: 5px;
+}
+.leftHead .slogun {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 48px;
+}
+.leftHead .slogun h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 48px;
+}
+.leftHead .slogun .slogunFirst {
+  font-family: "Fira Sans", sans-serif;
+}
+.leftHead .slogun #changingWords {
+  font-family: "Kaushan Script", cursive;
+}
+.leftHead .para p {
+  font-size: 24px;
+  margin: 0;
+  margin-top: 16px;
+  padding: 5px;
+  margin-left: 48px;
+  font-family: "Catamaran", sans-serif;
+  background-color: #fff;
+  display: inline-block;
+  border-radius: 20px;
+  line-height: 5px;
+}
+.leftHead .portal {
+  height: 280px;
+  width: 70%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.leftHead .portal img {
+  height: 200px;
+  width: 200px;
+  animation: portalRot 2s linear infinite;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.leftHead .portal img:hover {
+  height: 220px;
+  width: 220px;
+  animation-duration: 1.5s;
+}
+.leftHead .portal button {
+  background-color: none;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  font-family: "Catamaran", sans-serif;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(32, 32, 32, 0.2509803922);
+  padding: 5px 25px;
+}
+.leftHead .portal button:hover {
+  background-color: #dfdfdf;
+}
+
+@keyframes portalRot {
+  0% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}/*# sourceMappingURL=home.css.map */

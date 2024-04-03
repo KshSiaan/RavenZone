@@ -1,0 +1,201 @@
+@import 'res';
+@import 'cursor';
+
+body{
+    background-color:$background;
+}
+header{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: safe;
+    align-items: center;
+}
+header::before{
+    content: '';
+    position: absolute;
+    height: 70vh;
+    aspect-ratio: 1/1;
+    background-image: url('../res/magic-circle-drawing-28.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-clip: content-box;
+    opacity: 0.6;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+nav{
+    position: absolute;
+    top: 0;
+    height: 48px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    img{
+        height: 80%;
+        padding-left: 8px;
+        padding-right: 8px;
+        background-color: $background;
+    }
+}
+.leftHead{
+    height: 100%;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    background-image:url('../res/dotsmirr.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    background-clip: content-box;
+    
+}
+.rightHead{
+    height: 100%;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    background-image:url('../res/dots.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    background-clip: content-box;
+    position: relative;
+    img{
+        height: 90%;
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%,-50%);
+        animation: ravenFly 4s ease-in-out infinite;
+
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+}
+@keyframes ravenFly {
+    0%{
+        top: 52%;
+    }
+    50%{
+        top: 48%;
+    }
+    100%{
+        top: 52%;
+    }
+    
+}
+
+.leftHead{
+    h1{
+        margin: 0 auto;
+        margin-top: 108px;
+        padding: 0;
+        padding-left: 48px;
+        font-size: 124px;
+        font-family: 'Anton', sans-serif;
+        letter-spacing: 5px;
+        
+    }
+    .slogun{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 48px;
+
+        h3{
+            margin: 0;
+            padding: 0;
+            font-size: 48px;
+            
+        }
+        .slogunFirst{
+            font-family: 'Fira Sans', sans-serif;
+        }
+        #changingWords{
+            font-family: 'Kaushan Script', cursive;
+        }
+    }
+    .para{
+        p{
+            font-size: 24px;
+            margin: 0;
+            margin-top: 16px;
+            padding: 5px;
+            margin-left: 48px;
+            font-family: 'Catamaran', sans-serif;
+            background-color: #fff;
+            display: inline-block;
+            border-radius: 20px;
+            line-height: 5px;
+            
+        }
+    }
+    .portal{
+        height: 280px;
+        width: 70%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-items: center;
+
+
+        img {
+            height: 200px;
+            width: 200px;
+            animation: portalRot 2s linear infinite;
+            cursor: pointer;
+            transition: all 0.2s;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            
+            &:hover {
+                height:220px;
+                width: 220px;
+                animation-duration: 1.5s;
+
+            }
+        }
+        
+        button{
+            background-color: none;
+            border: none;
+            outline: none;
+            font-size: 24px;
+            font-family: 'Catamaran', sans-serif;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px #20202040;
+            padding: 5px 25px;
+
+            &:hover{
+                background-color: #dfdfdf;
+            }
+        }
+    }
+}
+@keyframes portalRot {
+    0%{
+        transform: rotate(360deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
